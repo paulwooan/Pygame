@@ -41,10 +41,10 @@ def main():
                 crashed = True
 
         rel_x = bckg_x % background.get_rect().width
-        screen.blit(background, [0, rel_x - background.get_rect().width])
+        screen.blit(background, [rel_x, 0  - background.get_rect().width])
         if rel_x > 0:
-            screen.blit(background2,(0, rel_x))
-        bckg_x += 1
+            screen.blit(background2,(rel_x , 0))
+        bckg_x -= 1
 
 
         screen.blit(character, (50,500))
